@@ -9,7 +9,7 @@ class MainView(TemplateView):
 def file_upload_view(request):
     #print(request.FILES)
     if request.method == 'POST':
-        my_file = request.FILes.get('file')
+        my_file = request.FILES.get('file')
         Doc.objects.create(upload=my_file)
         return HttpResponse('')
     return JsonResponse({'post':'false'})
