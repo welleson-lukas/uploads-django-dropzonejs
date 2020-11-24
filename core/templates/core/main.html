@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Upload agora
+{% endblock title %}
+
+{% block content %}
+<form action="upload/" method="post" class="dropzone dz">
+    {% csrf_token %}
+    <div class="fallback">
+        <input name="file" type="file" multiple />
+    </div>
+</form>
+{% endblock content %}
